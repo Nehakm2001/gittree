@@ -1,0 +1,15 @@
+CHARTS
+
+chart.js is a javascript library
+
+----------------------------------------
+install recharts package
+
+----  npm install recharts
+
+recharts website - https://recharts.org/en-US
+
+react table-----------
+
+npm i react-table
+npm i date-fns --- for formating date of birth column.
