@@ -1,0 +1,60 @@
+pop up , dropdowns,
+toaster
+
+---------------------------------------------
+Git is the local system
+GitHub is the cloud system
+
+push -- to push code to github it can update changes also to github.
+pull -- pull the data from github to the code in visual studio
+commit -- any changes made needs to be committed first to do any further github use/operations
+clone -- connect github and git (vs code).
+merge -- merging two branches not files.
+------------------------------------------
+Create new repository in github--
+
+type the name give public checkbox tick and click create a repository
+
+repository will be created
+-------------------------------------------------
+To push the code to the repository created in git
+
+git init
+git add . (to add all files)
+git commit -am "commiting"
+git remote add origin https://github.com/Nehakm2001/mern-amazon-clone.git
+git push origin main
+
+open in browser
+accept the git authentication to push the code
+
+your code will now be visible in the repository once you refresh it
+-----------------------------------------------------------------------------
+to create branch for main
+
+-->git checkout -b tooltip-added   //to create new branch tooltip-added
+-->//git checkout tooltip-added    //to go to that branch which is already created tooltip-added
+-->git status
+-->git commit -am "tooltip added" 
+-->git push origin tooltip-added
+
+-----------------------------------------------------------------------------
+to merge two branch created in above two steps
+
+follow upto to there the steps and then
+
+after creating new files
+
+-->git add.
+-->git push origin (branch name from github to whiich the file should be added)
+or // go to source control and syc changes
+
+after above steps newly created file will be visible in github
+
+then
+-->go to pull requests in github
+-->new pull requests
+-->compare changes give two branches to be compared
+-->press create pull request
+-->merge pull request
+
