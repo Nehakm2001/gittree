@@ -1,0 +1,28 @@
+set PATH=" "
+
+java -jar jenkins.war --httpPort=9090
+
+
+{{{https://get.jenkins.io/war-stable/1.480.1/------jenkins link for download file}------------not used may be
+
+https://jenkinssrini.s3.ap-south-1.amazonaws.com/jdk-17.rar----------jdk17rar file
+
+https://get.jenkins.io/war-stable/2.361.2/--------------jenkins file download file }}}
+
+
+
+
+
+{{{{{{{{{
+
+1st cmd -- cd D:\React\DevOps
+
+2nd cmd -- "D:\React\DevOps\jdk-17\bin\java" -jar "D:\React\DevOps\jenkins.war" --httpPort=9090
+
+then jenkins will open in its default port localhost:8080
+add this { --httpPort=9090 } to open jenkins in 9090 port
+
+
+
+
+technologies used , what it is working on, under which technology i am under
