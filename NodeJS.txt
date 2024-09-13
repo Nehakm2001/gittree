@@ -1,0 +1,148 @@
+
+1.node js has only one thread but behind the seen it uses multiple threads.
+
+2.node had the javascript engine which coverts js into the understandable machine langauge for the systme in case of chrome it is v8
+
+3.Blocking or Synchronous
+NON-BLOCKING I/O or Asynchronous
+Node applications are asynchronous by default
+It should not be used for CPU intensive applications but only for data intensive and real time applications
+
+
+NON-BLOCKING I/O
+Single thread will assign the request to the worker under it to connect with server to get the data instead of waiting for the first client request to wait
+
+4.NPM(Node package manager)
+packages kind of dependencies.
+
+5.fs- File System
+------------------------
+
+6.globle/window objects in js
+
+console.log();
+setTimerout();
+clearTimeout();
+setInterval();
+clearInterval();
+
+7. Strems and Buffer:
+To read/write large amount of data it takes very large time hence to make faster strems are used along with buffer.
+small amount of data is transferred continuously without having to wait.
+
+8. Status Codes:
+200 - OK
+301 - Resource moved permanently
+404 - Not found
+500 - Internal server error
+
+100 range - informational responses
+200 range - success codes
+300 range - codes for redirects
+400 range - user or client error codes
+500 range - server error codes
+
+9. install nodemon to make changes in the browser without running the server again.
+   npm install nodemon -g
+
+10. powershell -ExecutionPolicy Bypass nodemon server
+use above command to make to the nodemon run  
+
+powershell -ExecutionPolicy Bypass -Command "nodemon express.js"
+use above command to run the express.js file and stop the previous file running.
+
+11. {{{
+
+->npm init
+->npm install express
+->powershell -ExecutionPolicy Bypass -Command "nodemon express.js"    
+     
+ }}}
+
+to create package.json file run npm init in the terminal and give enter enter untill package.json is created.
+
+12. https://www.npmjs.com/ --->go here to install npm dependencies
+
+13. View Engines - display templates through dynamic html pages.
+
+14. EJS templates are processed through the EJS view engine on the server.
+
+15. Middleware - Code which runs (on the server) between getting a request and sending a response. 
+-> logger middleware to log details of every request
+-> authentication check middleware for pratected routes
+-> middleware to parse JSON data from requests
+-> retuen 404 pages 
+-> after the custom middleware next() is required for the middleware to move to next step.
+
+16. third party middleware - morgan
+
+17. MVC Basics- Model, View, Controller
+-- MVC is a way of structuring our code and files
+-- Keeps code more modular, reusable and easier to read.
+
+models - data structure used to interact with the database.
+views - html/ejs pages
+controller - forms link btw views and models.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Authentication with JWT (JSON Web Tokens)
+-- https://jwt.io/ --- JWT official website.
+-- JWT is 1 way to implement authentication.
+
+Hashing passwords 
+--> mongoose hooks and package to hash the passwords in database
+--> can be done by running our password through the hashing algorithm
+--> hashing algorithm takes the text and coverts to to a long string coded password.
+--> for more security creating salt attachting it to the password before it hashed. (salt is created using bcrypt package)
+
+Authentication using json web tokens and cookies.
+In case of dynamic(changing) data need to go through csrf mitigation strategies
+
+
+COOKIES(stores the data inside the user's browser) -----
+(cookie-parser - 3rd party package)
+--> Store data in a user's browser like name, age etc.
+
+--> When a request is made to our serverwe can create a cookie at that moment in time and can assign what data it could hold, how long it could stay 
+in the browser before it expires and it automatically deleted .
+
+--> and they are sent back to the server 
+--> from then on any request sent to our server with the data of whatever we have saved in the cookies 
+
+JSON Web Tokens----
+--> when the user logs in from the login form (browser) if the credentials are right (match with the ones in database) then the server creates the JSON web tokens 
+and it sends for the user to the browser where it can be stored in a cookie.
+
+--> JSON web token contains encoded data about the user identity, so as long as the user contains this cookie it is considered to be logged in and authenticated.
+--> Cookies are sent to the server by the browser for every request made (ex: for new pages in the website)
+--> Once the cookie is sent to the browser it validates the user if it is verified then it shows the user protected data to the user.
+ 
+JWT Signing (3 different parts JWT is made up of)----
+
+HEADERS - Tells the server what type of signature is being used (contains meta data about the token).
+
+PAYLOAD - when its decoded it's going to help us identify user on the server, it contains user id.
+
+SIGNATURE - ties everything together and it makes jwt secure and make sure it is not tampered on the client it's a bit like a stamp of authneticity from the server.
+ 
+When the server creates JWT after succesfull login of the user then it creates a header and the payload part first and exncodes both, then it takes these 2 and hash it together with SECRET (secure secret string) stored on the server, 
+and when all 3 (hashed headers and payload and the secret) are hashed together gives the signature which is added at he end of the JWT.
+      as    " Header.Payload.Signature "
+and then our JWT is addedto a cookie and sent and stored in the browser.
+-----------------------------------------------------------------------------------
+useState and useEffect
+
+
+import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+
+//count is 0 setCount is declared in useEffect using useState
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
