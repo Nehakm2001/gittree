@@ -1,0 +1,36 @@
+to create vs code project
+
+-> go to where the project needs to be created directory
+-> type cmd in the directory bar
+-> create folder using mkdir
+
+     mkdir express-auth-jwt
+
+-> go to that folder using cd
+
+     cd express-auth-jwt
+
+-> use code . to open that folder in vs code
+
+     code .
+
+OR
+
+open new window in the vs code and open new terminal and give command
+
+npx create-react-app projectname
+
+
+--------------------------
+if getting the below error
+
+npm ERR! code SELF_SIGNED_CERT_IN_CHAIN
+npm ERR! errno SELF_SIGNED_CERT_IN_CHAIN
+npm ERR! request to https://registry.npmjs.org/create-react-app failed, reason: self signed certificate in certificate chain
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\nehame\AppData\Local\npm-cache\_logs\2024-08-09T19_44_18_079Z-debug-0.log
+                    ----------
+give this command to disable Strict SSL Checking(temporary)
+
+npm config set strict-ssl false
