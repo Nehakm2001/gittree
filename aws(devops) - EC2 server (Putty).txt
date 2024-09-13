@@ -1,0 +1,32 @@
+putty - after creating EC2-instance open putty
+
+1. give public IP address of the ec2 instance in Host Name (or IP address).
+2. expand SSH in Connection.
+3. expand Auth in SSH.
+4. go to credentials.
+5. browse for Private key file for authentication and select the key generated while creating EC2 instance.
+6. click on Open to connect with putty.
+7. user name- ec2-user.
+8. putty will start.
+
+****-----------***********
+
+Commands-----------
+cd
+1. cd - yav directory beku adu add madakke
+2. ls - ah directory alli yavd yavd folder, file ide adu list torsatte
+   ls -al /bin - to show everything inside bin folder.
+3. cd ../ - to go one step back.
+4. cd and first letter of the folder name if no other files in that file is not starting with the same letter
+   'cd b'
+5. pwd - to know in which directory we are in 
+6. cp test testcopy - to copy the test file which is already there in the directory.
+7. rm testcopy - to remove/delete the testcopy file which is already there.
+8. cp test /home/saki/Downloads - to copy test file to /home/saki/Downloads.
+9. mkdir TESTFOLDER - to create the TESTFOLDER folder.
+10. rmdir TESTFOLDER - to delete the TESTFOLDER folder.
+11. rm -r FOLDERNAME - to delete the non empty folders.
+12. man ls - name, synopsis, description of the command ls.
+13. man cd - name, synopsis, description of the command cd.
+14. cd .. - back to the home folder
+
